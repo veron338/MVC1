@@ -1,0 +1,47 @@
+#signin{
+    @extend .section;
+
+    main{
+        @extend .card;
+        height: 500px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        //gap: 36px;
+        form{
+            @extend .form;
+            width: 400px;
+
+
+            .buttons{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+            }
+        }
+
+        .division{
+            height: 80%;
+            width: 1px;
+            align-self: center;
+            background-color: rgb(237, 237, 237);
+
+        }
+        .socialLogin{
+            align-self: flex-start;
+            width: 300px;
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            gap: 26px;
+            a{
+                text-decoration: none;
+
+            }
+        }
+    }
+}

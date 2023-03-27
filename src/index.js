@@ -1,24 +1,24 @@
 import express from "express"
-import mongoose from "mongoose"
-import multer from "multer";
-import cors from "cors"
-import RouterAPI from "./routers/Router.js"
-import * as dotenv from 'dotenv'
+import multer from "multer"
+import RoutesWeb from "./routes/web.routes.js"
+import  "./providers/Mongo.provider.js"
+import hbs from "./config/handlebars.js"
+import { config } from "dotenv"
+config()
 
-dotenv.config({path: "./.env"})
-
-mongoose.set('strictQuery', false)
-await mongoose.connect(`mongodb://${process.env.DB_URL}/${process.env.DB_DATABASE}`);
 
 const app = express()
 
-//Middlewares
-app.use( cors({
-    origin: 'http://127.0.0.1:5500',
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-}) )
+//handlebars
 
-app.use( express.static("./REST/public") )
+app.engine("hbs", hbs.engine)
+app.set("view engine", "hbs")
+app.set("views",process.env.VIEWS_FOLDER)
+
+//Middlewares
+
+
+app.use( express.static("/public") )
 
 app.use((req, res, next) => {
     console.log("Method: " + req.method)
@@ -26,7 +26,10 @@ app.use((req, res, next) => {
     console.log("------------------------------------")
 
     next()
+      
 })
+
+
 
 // req.body
 app.use( express.json() )
@@ -35,11 +38,8 @@ app.use( multer().none() )
 
 
 //Router
-app.get("/", (req, res) => {
-    res.send("HOME")
-})
 
-app.use(RouterAPI)
+app.use(RoutesWeb)
 
 
-app.listen(8080)
+app.listen(process.env.APP_PORT)

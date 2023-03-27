@@ -1,0 +1,54 @@
+@use "sass:color";
+
+@import 'abstracts/variables.scss';
+// @import 'abstracts/functions.scss';
+@import 'abstracts/mixins.scss';
+
+// @import 'vendors/bootstrap.scss';
+// @import 'vendors/jquery-ui.scss';
+
+@import 'base/reset.scss';
+@import 'base/typography.scss';
+
+@import 'layout/navigation.scss';
+// @import 'layout/grid.scss';
+@import 'layout/header.scss';
+@import 'layout/main.scss';
+// @import 'layout/footer.scss';
+// @import 'layout/sidebar.scss';
+// @import 'layout/forms.scss';
+
+@import 'components/section.scss';
+@import 'components/buttons.scss';
+@import 'components/card.scss';
+@import 'components/msgs.scss';
+@import 'components/form.scss';
+@import 'components/label.scss';
+@import 'components/counter.scss';
+// @import 'components/carousel.scss';
+// @import 'components/slider.scss';
+
+// @import 'pages/home.scss';
+@import 'pages/products.scss';
+@import 'pages/productDetail.scss';
+@import 'pages/cart.scss';
+@import 'pages/signin.scss';
+@import 'pages/createAccount.scss';
+// @import 'pages/about.scss';
+// @import 'pages/contact.scss';
+
+// @import 'themes/theme.scss';
+// @import 'themes/admin.scss';
+
+
+
+
+
+
+
+
+
+
+
+
+

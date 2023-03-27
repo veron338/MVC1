@@ -1,0 +1,86 @@
+header.principal {
+    height: 64px;
+    padding: 0 64px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    z-index: 900;
+
+    background-color: $primaryColor;
+
+    a {
+        text-decoration: none;
+    }
+
+    form {
+        height: 28px;
+        width: 300px;
+        position: relative;
+
+        * {
+            height: 100%;
+            border: none;
+        }
+
+        input {
+            width: 100%;
+            padding: 2px 14px 0;
+            border-radius: 28px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+        }
+
+        button {
+            width: 28px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+
+        }
+    }
+
+    >nav {
+        >a {
+            padding: 6px 14px;
+            border-radius: 18px;
+            color: inherit;
+            font-weight: bold;
+            font-size: 1.1rem;
+
+            &:hover {
+                color: $white;
+                background-color: $black;
+
+            }
+        }
+    }
+
+    
+    #cartBtn{
+        position: relative;
+        span{
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+
+            position: absolute;
+            top: -2px;
+            right: -2px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: rgb(242, 61, 61);
+
+            font-size: .9rem;
+            font-weight: normal;
+            color: $white;
+        }
+    }
+}

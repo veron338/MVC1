@@ -1,0 +1,60 @@
+.baseCounter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span{
+        background-color: adjust-color($color: $grey, $lightness: 5%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a{
+        text-decoration: none;
+        background-color: $grey;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+    }
+}
+
+.smallCounter {
+    @extend .baseCounter;
+    
+    @include roundChildrensCorner(16px);
+    span{
+        width: 32px;
+        height: 32px;
+    }
+    a{
+        height: 32px;
+        width: 32px;
+    }
+}
+
+.bigCounter {
+    @extend .baseCounter;
+
+    padding: 32px 34px 20px;
+    max-width: 320px;
+    margin: auto;
+
+    @include roundChildrensCorner(8px);
+
+    span {
+        height: 44px;
+        width: 80%;
+        background-color: adjust-color($color: $grey, $lightness: 5%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a {
+        height: 44px;
+        width: 64px;
+    }
+}

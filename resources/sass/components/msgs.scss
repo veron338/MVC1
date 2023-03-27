@@ -1,0 +1,19 @@
+.msg{
+    padding: 12px;
+    border-radius: 14px;
+    font-weight: bold;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.errMsg{
+    @extend .msg;
+    background-color: rgb(237, 192, 192);
+    color: rgb(156, 71, 71);
+}
+
+.successMsg{
+    @extend .msg;
+    background-color: rgb(192, 237, 216);
+    color: rgb(71, 156, 106);
+}

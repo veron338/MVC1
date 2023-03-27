@@ -1,0 +1,117 @@
+#sectionCart{
+    @extend .section;
+    display: grid;
+    grid-template-areas: "header  aside" "main  aside" "main  logo";
+    gap: 50px;
+    header{
+        margin-bottom: 0;
+    }
+
+    main{
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        .titles,.cartProductItem{
+            display: grid;
+            grid-template-columns: 1fr 4fr 1fr 3fr 1fr 1fr;
+            gap: 16px;
+            align-items: center;
+            
+            >*{
+                text-align: center;
+            }
+
+            .title{
+                text-align: left;
+            }
+        }
+        
+        .cartProductItem{
+            font-size: 1.2rem;
+            .img{
+                // grid-column: 1 span;
+                //grid-area: img;
+                width: 100%;
+                max-height: 56px;
+                object-fit: contain;
+            }
+            .title{
+                font-size: 1.3rem;
+                font-weight: bold;
+            }
+            .price{
+                //grid-area: price;
+
+            }
+            .counter{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                $border-radius: 16px;
+                span{
+                    width: 32px;
+                    height: 32px;
+                    background-color: adjust-color($color: $grey, $lightness: 5%);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                a{
+                    height: 32px;
+                    width: 32px;
+                    text-decoration: none;
+                    background-color: $grey;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.3rem;
+                }
+                a:first-of-type{
+                    border-top-left-radius: $border-radius;
+                    border-bottom-left-radius: $border-radius;
+                }
+                a:last-of-type{
+                    border-top-right-radius: $border-radius;
+                    border-bottom-right-radius: $border-radius;
+                }
+
+            }
+            .subtotal{
+                font-weight: bold;
+
+            }
+            .deleteBtn{
+                text-decoration: none;
+            }
+        }
+    }
+
+    aside{
+        @extend .card;
+        width: 300px;
+        height: 500px;
+        padding: 35px;
+        grid-area: aside;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 56px;
+
+        .texts{}
+        .buttons{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-align: center;
+            .btn-primary{
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,156 @@
+#productDetail {
+    @extend .section;
+
+    main {
+        @extend .card;
+        padding: 60px 84px 60px 60px;
+        min-height: 90vh;
+        display: grid;
+        grid-template-columns: 5fr 6fr;
+        gap: 40px;
+        position: relative;
+
+        .images {
+            height: auto;
+            min-height: 500px;
+
+            width: 100%;
+            min-width: 400px;
+
+            position: sticky;
+            top: 64px;
+
+            img {
+                width: 100%;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                object-fit: contain;
+                object-position: top center;
+            }
+
+            .sale {
+                @extend .label;
+                top: 20px;
+                left: 20px;
+    
+                letter-spacing: 1px;
+            }
+        }
+
+
+        .title {
+            padding: 16px 0;
+            margin-bottom: 36px;
+            position: sticky;
+            top: 63px;
+
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: baseline;
+            // gap: 20px;
+
+            display: grid;
+            grid-template-columns: 6fr 4fr;
+
+            background-color: $white;
+            
+            h2{
+                font-size: 2.4rem;
+
+                span {
+                    color: adjust-color($color: $black, $lightness: 40%);
+                }
+            }
+
+            .category {
+                @extend .label;
+                width: max-content;
+                height: max-content;
+                //margin: 0 auto;
+                margin-left: auto;
+                top: 8px;
+
+                position: relative;
+    
+                text-transform: capitalize;
+                font-variant: small-caps;
+                letter-spacing: 1.5px;
+            }
+        }
+
+        .description {
+            font-size: 1.1rem;
+            margin-bottom: 36px;
+
+        }
+
+        .table-container {
+            margin-bottom: 48px;
+
+            table {
+                padding: 16px;
+                margin: auto;
+                border-radius: 28px;
+                border-collapse: collapse;
+                overflow: hidden;
+                box-shadow: 0 0 4px rgba(black, 0.1);
+
+                tbody {
+                    tr {
+                        &:first-of-type {}
+
+                        &:nth-child(2n-1) {
+                            background-color: rgb(233, 233, 233);
+                        }
+
+                        &:nth-child(2n) {
+                            background-color: rgb(249, 249, 249);
+                        }
+
+                        &>*:first-of-type {
+                            padding-left: 32px;
+                        }
+
+                        &>*:last-of-type {
+                            padding-right: 32px;
+                        }
+
+
+                        th,
+                        td {
+                            padding: 8px 16px;
+                        }
+
+                        th {
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+        }
+
+        .price {
+            margin-bottom: 26px;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .buttons {
+            a {
+                width: 250px;
+                margin: auto;
+                font-size: 1.1rem;
+            }
+        }
+
+        .counter{
+            @extend .bigCounter;
+            padding-top: 0;
+        }
+
+        
+    }
+}

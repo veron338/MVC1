@@ -1,0 +1,22 @@
+#createAccount {
+    padding: 50px 64px;
+    @extend .section;
+
+    main{
+        display: flex;
+        form {
+            @extend .form;
+            width: 50%;
+        }
+
+        >div{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 5rem;
+        }
+    }
+
+}

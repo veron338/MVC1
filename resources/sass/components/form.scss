@@ -1,0 +1,54 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 26px;
+    .field{
+        @extend .formField;
+    }
+}
+
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1rem;
+
+
+    label {
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    input {
+        height: 40px;
+        padding: 16px;
+        border: none;
+        border-radius: 12px;
+        font-size: 1rem;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    }
+
+    textarea{
+        height: 120px;
+        padding: 16px;
+        border: none;
+        border-radius: 12px;
+        font-size: 1.1em;
+        font-family: inherit;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+        resize: none;
+    }
+
+    input[type=checkbox]{
+        height: 20px;
+
+    }
+
+    input[type=file]{
+        height: 20px;
+
+    }
+}

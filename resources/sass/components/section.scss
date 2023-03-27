@@ -1,0 +1,24 @@
+.section{
+    padding: 50px 64px;
+    header{
+        @extend .headerSection;
+    }
+
+    main{
+       @extend .mainSection;
+    }
+}
+
+.headerSection{
+    @extend .card;
+    padding: 32px 64px;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.mainSection{
+    @extend .card;
+    padding: 52px 64px;
+
+}

@@ -1,0 +1,12 @@
+.label{
+    display: block;
+    padding: 8px 14px;
+    border-radius: 16px;
+
+    position: absolute;
+    z-index: 600;
+    
+    background-color: $primaryColor;
+    color: $white;
+    font-weight: bold;
+}

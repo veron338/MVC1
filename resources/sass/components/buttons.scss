@@ -1,0 +1,73 @@
+
+.btn{
+    width: 100%;
+    border: none;
+    border-radius: 14px;
+
+    display: block;
+
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    @extend .btn;
+    padding: 14px 22px;
+    text-decoration: none;
+    color: $white;
+    background-color: $primaryColor;
+    &:hover{
+        filter: brightness(.92);
+    }
+}
+
+.btn-secondary {
+    @extend .btn;
+    padding: 12px 20px;
+    color: inherit;
+    background-color: rgb(240, 240, 240);
+    &:hover{
+        //background-color: adjust-color($color: $primaryColor,$lightness: -2%);
+        filter: brightness(.95);
+    }
+}
+
+.btn-terciary{
+    @extend .btn;
+    padding: 14px 22px;
+    box-shadow: 0 0 4px 1.5px rgba(0, 0, 0, 0.2);
+    &:hover{
+        background-color: rgb(237, 237, 237);
+        
+    }
+}
+
+.btn-singin{
+    @extend .btn-terciary;
+    display: flex;
+    align-items: center;
+
+    &::before{
+        content: "";
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+        border-radius: 50%;
+        display: inline-block;
+        background-color: red;
+    }
+}
+
+.btn-singin-facebook{
+    @extend .btn-singin;
+}
+
+.btn-singin-google{
+    @extend .btn-singin;
+}
+
+

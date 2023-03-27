@@ -1,0 +1,637 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-break: break-all;
+}
+
+a {
+  color: inherit;
+}
+
+:root {
+  font-family: calibri;
+}
+
+#productNav {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  z-index: 900;
+  transform-origin: top;
+  transform: scaleY(0);
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-delay: 1s;
+  height: 48px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: grey;
+}
+#productNav a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
+  border: solid 1px white;
+}
+
+#productBtn:hover + #productNav {
+  transition-delay: 0s;
+  transform: scaleY(1);
+}
+
+#productNav:hover {
+  transition-delay: 0s;
+  transform: scaleY(1);
+}
+
+header.principal {
+  height: 64px;
+  padding: 0 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  background-color: rgb(32, 173, 121);
+}
+header.principal a {
+  text-decoration: none;
+}
+header.principal form {
+  height: 28px;
+  width: 300px;
+  position: relative;
+}
+header.principal form * {
+  height: 100%;
+  border: none;
+}
+header.principal form input {
+  width: 100%;
+  padding: 2px 14px 0;
+  border-radius: 28px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+header.principal form button {
+  width: 28px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+header.principal > nav > a {
+  padding: 6px 14px;
+  border-radius: 18px;
+  color: inherit;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+header.principal > nav > a:hover {
+  color: white;
+  background-color: black;
+}
+header.principal #cartBtn {
+  position: relative;
+}
+header.principal #cartBtn span {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(242, 61, 61);
+  font-size: 0.9rem;
+  font-weight: normal;
+  color: white;
+}
+
+main.principal {
+  min-height: 85vh;
+  background-color: rgb(230, 230, 230);
+}
+
+.section, #createAccount, #signin, #sectionCart, #productDetail {
+  padding: 50px 64px;
+}
+.headerSection, #products header, .section header, #createAccount header, #signin header, #sectionCart header, #productDetail header {
+  padding: 32px 64px;
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.mainSection, .section main, #createAccount main, #signin main, #sectionCart main, #productDetail main {
+  padding: 52px 64px;
+}
+
+.btn, .btn-terciary, .btn-singin, .btn-singin-google, .btn-singin-facebook, .btn-secondary, .btn-primary {
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  display: block;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  padding: 14px 22px;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(32, 173, 121);
+}
+.btn-primary:hover {
+  filter: brightness(0.92);
+}
+
+.btn-secondary {
+  padding: 12px 20px;
+  color: inherit;
+  background-color: rgb(240, 240, 240);
+}
+.btn-secondary:hover {
+  filter: brightness(0.95);
+}
+
+.btn-terciary, .btn-singin, .btn-singin-google, .btn-singin-facebook {
+  padding: 14px 22px;
+  box-shadow: 0 0 4px 1.5px rgba(0, 0, 0, 0.2);
+}
+.btn-terciary:hover, .btn-singin:hover, .btn-singin-google:hover, .btn-singin-facebook:hover {
+  background-color: rgb(237, 237, 237);
+}
+
+.btn-singin, .btn-singin-google, .btn-singin-facebook {
+  display: flex;
+  align-items: center;
+}
+.btn-singin::before, .btn-singin-google::before, .btn-singin-facebook::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: red;
+}
+
+.card, #sectionCart aside, #products main .product, .headerSection, #products header, .section header, #createAccount header, #signin header, #sectionCart header, #productDetail header, .mainSection, .section main, #createAccount main, #signin main, #sectionCart main, #productDetail main {
+  border-radius: 32px;
+  background-color: white;
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1) inset, 0px 0px 6px 1px rgba(0, 0, 0, 0.3) inset, 0 0 16px 2px rgba(61, 61, 61, 0.2);
+}
+
+.msg, .successMsg, .errMsg {
+  padding: 12px;
+  border-radius: 14px;
+  font-weight: bold;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.errMsg {
+  background-color: rgb(237, 192, 192);
+  color: rgb(156, 71, 71);
+}
+
+.successMsg {
+  background-color: rgb(192, 237, 216);
+  color: rgb(71, 156, 106);
+}
+
+.form, #createAccount main form, #signin main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 26px;
+}
+.formField, .form .field, #createAccount main form .field, #signin main form .field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 1rem;
+}
+.formField label, .form .field label, #createAccount main form .field label, #signin main form .field label {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.formField input, .form .field input, #createAccount main form .field input, #signin main form .field input {
+  height: 40px;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+}
+.formField textarea, .form .field textarea, #createAccount main form .field textarea, #signin main form .field textarea {
+  height: 120px;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1em;
+  font-family: inherit;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  resize: none;
+}
+.formField input[type=checkbox], .form .field input[type=checkbox], #createAccount main form .field input[type=checkbox], #signin main form .field input[type=checkbox] {
+  height: 20px;
+}
+.formField input[type=file], .form .field input[type=file], #createAccount main form .field input[type=file], #signin main form .field input[type=file] {
+  height: 20px;
+}
+
+.label, #productDetail main .title .category, #productDetail main .images .sale, #products main .product .sale {
+  display: block;
+  padding: 8px 14px;
+  border-radius: 16px;
+  position: absolute;
+  z-index: 600;
+  background-color: rgb(32, 173, 121);
+  color: white;
+  font-weight: bold;
+}
+
+.baseCounter, .bigCounter, #productDetail main .counter, #products main .product .counter, .smallCounter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.baseCounter span, .bigCounter span, #productDetail main .counter span, #products main .product .counter span, .smallCounter span {
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.baseCounter a, .bigCounter a, #productDetail main .counter a, #products main .product .counter a, .smallCounter a {
+  text-decoration: none;
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.smallCounter > *:first-child {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+.smallCounter > *:last-child {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+.smallCounter span {
+  width: 32px;
+  height: 32px;
+}
+.smallCounter a {
+  height: 32px;
+  width: 32px;
+}
+
+.bigCounter, #productDetail main .counter, #products main .product .counter {
+  padding: 32px 34px 20px;
+  max-width: 320px;
+  margin: auto;
+}
+.bigCounter > *:first-child, #productDetail main .counter > *:first-child, #products main .product .counter > *:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.bigCounter > *:last-child, #productDetail main .counter > *:last-child, #products main .product .counter > *:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.bigCounter span, #productDetail main .counter span, #products main .product .counter span {
+  height: 44px;
+  width: 80%;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bigCounter a, #productDetail main .counter a, #products main .product .counter a {
+  height: 44px;
+  width: 64px;
+}
+
+#products {
+  padding: 50px 64px;
+}
+#products main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+  gap: 24px 32px;
+}
+#products main .product {
+  padding: 24px;
+  text-align: center;
+  position: relative;
+}
+#products main .product .images {
+  height: 400px;
+  position: relative;
+}
+#products main .product .images img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#products main .product .texts {
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 18px;
+}
+#products main .product .texts span {
+  color: gray;
+}
+#products main .product .texts h3 {
+  font-size: 1.2rem;
+}
+#products main .product .buttons {
+  padding: 32px 28px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+#products main .product .buttons a {
+  text-decoration: none;
+}
+#products main .product .sale {
+  top: 24px;
+  left: 28px;
+  letter-spacing: 1px;
+}
+
+#productDetail main {
+  padding: 60px 84px 60px 60px;
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: 40px;
+  position: relative;
+}
+#productDetail main .images {
+  height: auto;
+  min-height: 500px;
+  width: 100%;
+  min-width: 400px;
+  position: sticky;
+  top: 64px;
+}
+#productDetail main .images img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+  object-position: top center;
+}
+#productDetail main .images .sale {
+  top: 20px;
+  left: 20px;
+  letter-spacing: 1px;
+}
+#productDetail main .title {
+  padding: 16px 0;
+  margin-bottom: 36px;
+  position: sticky;
+  top: 63px;
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  background-color: white;
+}
+#productDetail main .title h2 {
+  font-size: 2.4rem;
+}
+#productDetail main .title h2 span {
+  color: #666666;
+}
+#productDetail main .title .category {
+  width: max-content;
+  height: max-content;
+  margin-left: auto;
+  top: 8px;
+  position: relative;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  letter-spacing: 1.5px;
+}
+#productDetail main .description {
+  font-size: 1.1rem;
+  margin-bottom: 36px;
+}
+#productDetail main .table-container {
+  margin-bottom: 48px;
+}
+#productDetail main .table-container table {
+  padding: 16px;
+  margin: auto;
+  border-radius: 28px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+#productDetail main .table-container table tbody tr:nth-child(2n-1) {
+  background-color: rgb(233, 233, 233);
+}
+#productDetail main .table-container table tbody tr:nth-child(2n) {
+  background-color: rgb(249, 249, 249);
+}
+#productDetail main .table-container table tbody tr > *:first-of-type {
+  padding-left: 32px;
+}
+#productDetail main .table-container table tbody tr > *:last-of-type {
+  padding-right: 32px;
+}
+#productDetail main .table-container table tbody tr th,
+#productDetail main .table-container table tbody tr td {
+  padding: 8px 16px;
+}
+#productDetail main .table-container table tbody tr th {
+  text-transform: capitalize;
+}
+#productDetail main .price {
+  margin-bottom: 26px;
+  font-size: 2rem;
+  text-align: center;
+}
+#productDetail main .buttons a {
+  width: 250px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+#productDetail main .counter {
+  padding-top: 0;
+}
+
+#sectionCart {
+  display: grid;
+  grid-template-areas: "header  aside" "main  aside" "main  logo";
+  gap: 50px;
+}
+#sectionCart header {
+  margin-bottom: 0;
+}
+#sectionCart main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+#sectionCart main .titles, #sectionCart main .cartProductItem {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr 3fr 1fr 1fr;
+  gap: 16px;
+  align-items: center;
+}
+#sectionCart main .titles > *, #sectionCart main .cartProductItem > * {
+  text-align: center;
+}
+#sectionCart main .titles .title, #sectionCart main .cartProductItem .title {
+  text-align: left;
+}
+#sectionCart main .cartProductItem {
+  font-size: 1.2rem;
+}
+#sectionCart main .cartProductItem .img {
+  width: 100%;
+  max-height: 56px;
+  object-fit: contain;
+}
+#sectionCart main .cartProductItem .title {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+#sectionCart main .cartProductItem .counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sectionCart main .cartProductItem .counter span {
+  width: 32px;
+  height: 32px;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#sectionCart main .cartProductItem .counter a {
+  height: 32px;
+  width: 32px;
+  text-decoration: none;
+  background-color: rgb(230, 230, 230);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+#sectionCart main .cartProductItem .counter a:first-of-type {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+#sectionCart main .cartProductItem .counter a:last-of-type {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+#sectionCart main .cartProductItem .subtotal {
+  font-weight: bold;
+}
+#sectionCart main .cartProductItem .deleteBtn {
+  text-decoration: none;
+}
+#sectionCart aside {
+  width: 300px;
+  height: 500px;
+  padding: 35px;
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+}
+#sectionCart aside .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+#sectionCart aside .buttons .btn-primary {
+  font-size: 1.2rem;
+}
+
+#signin main {
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#signin main form {
+  width: 400px;
+}
+#signin main form .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#signin main .division {
+  height: 80%;
+  width: 1px;
+  align-self: center;
+  background-color: rgb(237, 237, 237);
+}
+#signin main .socialLogin {
+  align-self: flex-start;
+  width: 300px;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 26px;
+}
+#signin main .socialLogin a {
+  text-decoration: none;
+}
+
+#createAccount {
+  padding: 50px 64px;
+}
+#createAccount main {
+  display: flex;
+}
+#createAccount main form {
+  width: 50%;
+}
+#createAccount main > div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 5rem;
+}
+
+/*# sourceMappingURL=app.css.map */

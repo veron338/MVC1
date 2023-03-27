@@ -1,0 +1,79 @@
+
+#products {
+    padding: 50px 64px;
+
+    header {
+        @extend .headerSection;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,
+                minmax(325px, 1fr));
+        gap: 24px 32px;
+
+        .product {
+            @extend .card;
+            padding: 24px;
+            text-align: center;
+            position: relative;
+
+            .images {
+                height: 400px;
+                position: relative;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    // background-color: red;
+                }
+            }
+
+            .texts {
+                height: 110px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 18px;
+
+                span {
+                    color: adjust-color($color: $black, $lightness: 50%);
+                }
+
+                h3 {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .counter{
+                @extend .bigCounter;
+
+            }
+
+            .buttons {
+                padding: 32px 28px 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+                
+                a{
+                    text-decoration: none;
+                }
+            }
+
+            .sale {
+                @extend .label;
+
+                top: 24px;
+                left: 28px;
+
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
